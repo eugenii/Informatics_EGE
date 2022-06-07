@@ -68,22 +68,24 @@
 
 # v7_15  ====================
 
-# A = 1
-# while True:
-#     for x in range(1, 240):
-#         z1 = int(A <= 30)
-#         z2 = int(x % 8 == 0)
-#         z3 = int(x % A != 0)
-#         z4 = int(x % 10 != 0)
-#         if z1 and (z2 and z3 <= z4):
-#             continue
-#         else:
-#             break
-#     else:
-#         A += 1
-#         continue
-#     break
-# print(A)
+A = 1
+while True:
+    for x in range(1, 240):
+        z1 = A <= 30
+        z2 = x % 8 == 0
+        z3 = x % A != 0
+        z4 = x % 10 != 0
+        if A <= 30  and ((x % 8 == 0 and x % A != 0) <= x % 10 != 0):
+            # print(x, z1 and z2 and z3 <= z4)
+            continue
+        else:
+            break
+    else:
+        print(A)
+        A += 1
+        continue
+    break
+print(A)
 
 # v8_15
 
