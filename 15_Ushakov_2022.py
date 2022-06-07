@@ -88,8 +88,8 @@
 
 # A = 0
 # while True:
-#     for x in range(-100, 1000):
-#         for y in range(-100, 1000):
+#     for x in range(-100, 100):
+#         for y in range(-100, 100):
 #             if x < 40 or y < 50 or (3 * x + 2 * y > A):
 #                 continue
 #             else:
@@ -104,19 +104,20 @@
 # print(A - 1)
 
 # v9_15
-A  = 1
-while True:
-    for x in range(51 * 25):
-        z1 = x & 51 == 0
-        z2 = x & A == 0
-        z3 = x & 25 != 0
-        if z1 or (z2 <= z3):
-            continue
-        else:
-            continue
-    else:
-        break
-    A += 1
-    continue
+# A  = 1
+# while True:
+#     for x in range(51 * 25, 0, -1):
+#         z1 = x & 51 != 0
+#         z2 = x & A == 0
+#         z3 = x & 25 != 0
+#         if z1 <= (z2 <= z3):
+#             continue
+#         else:
+#             break
+#     else:
+#         break
+#     A += 1
+# 
+# print(A)
 
-print(A)
+# v10_15
