@@ -142,19 +142,23 @@
 #     break
 # print(A)
 
-# v15_15
-A = 100
-while True:
-    for x in range(1, 3000):
-        z1 = x % 6 == 0
-        z2 = x % 15 == 0
-        z3 = x % A != 0
-        if z1 and z2 and z3 and A >= 40:
-            continue
-        else:
+# v7_15
+def f(x, a):
+    z1 = a <= 30
+    z2 = x % 8 == 0
+    z3 = x % a != 0
+    z4 = x % 10 != 0
+    return z1 and (z2 and z3  <= z4)
+ 
+for a in range(1, 1001):
+    for x in range(1, 1001):
+        # print(f(x,a))
+        if not f(x, a):
             break
     else:
-        A -= 1
         continue
-    break
-print(A)
+    print(a)
+
+
+    
+        
