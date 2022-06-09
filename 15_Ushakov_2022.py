@@ -15,6 +15,7 @@
 # print(A)
 
 # v2_15
+
 # A = 0
 # while True:
 #     for x in range(61):
@@ -33,11 +34,23 @@
 #     
 # print(A)
 
-# v3_15
-# решается преобразованием выражения и отмечанием всех необходимых значений А
-# для перекрытия ВСЕХ возможных х
+# v3_15 # answer 3 ============================ 
+
+# out = []
+# for a1 in range(1, 50):
+#     for a2 in range(1, 50):
+#         for x in range(50):
+#             z1 = (5 <= x <= 13)
+#             z2 = (a1 <= x <= a2)
+#             z3 = (8 <= x <= 19)
+#             if not ((z1 and not(z2)) <= (z3 and not(z2))):
+#                 break
+#         else:
+#             out.append(a2 - a1)
+# print(min(out))
 
 # v4_15
+
 # A = 0
 # while True:
 #     for x in range(45 * 33 +10):
@@ -51,6 +64,7 @@
 # print(A)
 
 # v6_15
+
 # A = 1
 # while True:
 #     for x in range(1000):
@@ -66,26 +80,32 @@
 #         break
 #     A += 1
 
-# v7_15  ====================
-
+# v7_15  # answer 20
+# def f(x, a):
+#     z1 = a <= 30
+#     z2 = x % 8 == 0
+#     z3 = x % a != 0
+#     z4 = x % 10 != 0
+#     return z1 and ((z2 and z3)  <= z4)
+#  
+# for a in range(1, 1001):
+#     for x in range(1, 1001):
+#         if not f(x, a):
+#             break
+#     else:
+#         print(a)
+# another variant:
 # A = 1
-# while True:
-#     for x in range(1, 240):
-#         z1 = A <= 30
-#         z2 = x % 8 == 0
-#         z3 = x % A != 0
-#         z4 = x % 10 != 0
-#         if A <= 30  and ((x % 8 == 0 and x % A != 0) <= x % 10 != 0):
-#             # print(x, z1 and z2 and z3 <= z4)
+# while A <= 1000:
+#     for x in range(1, 1000):
+#         if A <= 30  and (((x % 8 == 0) and (x % A != 0)) <= (x % 10 != 0)):
 #             continue
 #         else:
 #             break
 #     else:
 #         print(A)
-#         A += 1
-#         continue
-#     break
-# print(A)
+#     A += 1
+
 
 # v8_15
 
@@ -125,9 +145,9 @@
 
 # v10_15
 
-# v11_15  ПРОШЛО, НО НАДО ПРОВЕРИТЬ
+# v11_15  # answer 24
 # A = 1
-# while True:
+# while A <= 1001:
 #     for x in range(1, 100):
 #         z1 = x % A == 0
 #         z2 = x % 6 == 0
@@ -137,27 +157,14 @@
 #         else:
 #             break
 #     else:
-#         A += 1
-#         continue
-#     break
-# print(A)
+#         print(A)
+#     A += 1
+        
 
-# v7_15
-def f(x, a):
-    z1 = a <= 30
-    z2 = x % 8 == 0
-    z3 = x % a != 0
-    z4 = x % 10 != 0
-    return z1 and (z2 and z3  <= z4)
+    
+
+
  
-for a in range(1, 1001):
-    for x in range(1, 1001):
-        # print(f(x,a))
-        if not f(x, a):
-            break
-    else:
-        continue
-    print(a)
 
 
     
